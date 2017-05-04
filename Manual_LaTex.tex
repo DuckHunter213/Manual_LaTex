@@ -1,0 +1,57 @@
+\documentclass[10pt,a4paper]{book}
+
+\usepackage{amsmath}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+
+\setlength{\textwidth}{15cm} \setlength{\textheight}{25cm}
+\setlength{\hoffset}{-.5cm} \setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{1cm} \setlength{\topmargin}{-2cm}
+\pagestyle{empty}
+
+\newcommand{\titulo}[1]{\begin{center}{\large\bf #1}\end{center}}
+\newcommand{\autor}[1]{\begin{center}{\sc #1}\end{center}}
+\newcommand{\direccion}[1]{\vspace*{-.5cm}\begin{center}{ #1}\end{center}}
+\newcommand{\email}[1]{\vspace*{-.5cm}\begin{center}{ #1}\end{center}}
+\renewcommand{\baselinestretch}{1.4}
+
+\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+\hspace*{0.2\textwidth} % Whitespace to the left of the title page
+\rule{1pt}{\textheight} % Vertical line
+\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+
+{\noindent\Huge\bfseries Manual \\[0.5\baselineskip]  ~Como Utilizar \LaTeX }\\[2\baselineskip] % Title
+{\large \textit{Con Ejemplos}}\\[4\baselineskip] % Tagline or further description
+{\Large \textsc{Luis Fernando Gomez Alejandre}} % Author name
+
+\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+{\noindent gomez.alejandre@gmail.com }\\[\baselineskip] % Publisher and logo
+}}
+\endgroup}
+
+% Escribiendo lás referencias de los autores.
+%
+%
+\addto\captionsspanish{\def\bibname{Referencias}}
+\renewenvironment{thebibliography}[1]
+     {\footnotesize \section*{\normalsize \bibname}
+      \list{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \usecounter{enumi}}
+            }
+
+
+\begin{document}
+
+\titleGM 
+
+\newpage
+
+\titulo{Inicio Básico}
+\titulo{Comandos}
+
+\end{document}
