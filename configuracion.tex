@@ -1,0 +1,20 @@
+%Importe de los paquetes a ocupar.
+\usepackage{amsmath}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+%Aquí se definen las dimensiones de la hoja.
+\setlength{\textwidth}{15cm} \setlength{\textheight}{25cm}
+\setlength{\hoffset}{-.5cm} \setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{1cm} \setlength{\topmargin}{-2cm}
+\pagestyle{empty}
+
+% Escribiendo lás referencias de los autores.
+\addto\captionsspanish{\def\bibname{Referencias}}
+\renewenvironment{thebibliography}[1]
+     {\footnotesize \section*{\normalsize \bibname}
+      \list{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \usecounter{enumi}}
+            }

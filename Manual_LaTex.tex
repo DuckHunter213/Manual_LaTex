@@ -1,57 +1,34 @@
-\documentclass[10pt,a4paper]{book}
+%De que tipo de documento se habla.
+\documentclass[10pt,a4paper]{article}
 
-\usepackage{amsmath}
-\usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{ragged2e}
+\include{configuracion.tex}
 
-\setlength{\textwidth}{15cm} \setlength{\textheight}{25cm}
-\setlength{\hoffset}{-.5cm} \setlength{\oddsidemargin}{1cm}
-\setlength{\evensidemargin}{1cm} \setlength{\topmargin}{-2cm}
-\pagestyle{empty}
-
-\newcommand{\titulo}[1]{\begin{center}{\large\bf #1}\end{center}}
-\newcommand{\autor}[1]{\begin{center}{\sc #1}\end{center}}
-\newcommand{\direccion}[1]{\vspace*{-.5cm}\begin{center}{ #1}\end{center}}
-\newcommand{\email}[1]{\vspace*{-.5cm}\begin{center}{ #1}\end{center}}
-\renewcommand{\baselinestretch}{1.4}
-
-\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
-\hbox{ % Horizontal box
-\hspace*{0.2\textwidth} % Whitespace to the left of the title page
-\rule{1pt}{\textheight} % Vertical line
-\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
-\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
-
-{\noindent\Huge\bfseries Manual \\[0.5\baselineskip]  ~Como Utilizar \LaTeX }\\[2\baselineskip] % Title
-{\large \textit{Con Ejemplos}}\\[4\baselineskip] % Tagline or further description
-{\Large \textsc{Luis Fernando Gomez Alejandre}} % Author name
-
-\vspace{0.5\textheight} % Whitespace between the title block and the publisher
-{\noindent gomez.alejandre@gmail.com }\\[\baselineskip] % Publisher and logo
-}}
-\endgroup}
-
-% Escribiendo lás referencias de los autores.
-%
-%
-\addto\captionsspanish{\def\bibname{Referencias}}
-\renewenvironment{thebibliography}[1]
-     {\footnotesize \section*{\normalsize \bibname}
-      \list{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \usecounter{enumi}}
-            }
-
+\usepackage{configuracion}
+\usepackage{portada}
+%\subinput*{../}{configuracion.tex}
 
 \begin{document}
 
-\titleGM 
+\Portada
 
-\newpage
+
+\titulo{Introducción}
 
 \titulo{Inicio Básico}
 \titulo{Comandos}
+
+\comando{usepackage}{Este comando es el encargado de importa librerias al documento, es decir una agrupación de otros comandos diseñado para reducir lineas de código y empaquetar funciones}
+\ejemplo{usepackage[spanish]{babel}:  Para importar la escritura con tildes}
+\ejemplo{usepackage[utf8]{inputenc}: }
+
+\subtitulo{Formatos de texto}
+
+\comando{textbf}{Este comando es ocupado para poner letras en negritas}{\textbf{Negritas}}
+
+\comando{textit}{Este comando es ocupado para poner letras en cursivas}{\textit{Cursivas}}
+
+
+\titulo{Contenido Avanzado}
+
 
 \end{document}
